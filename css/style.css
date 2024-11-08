@@ -6,133 +6,163 @@
 
 body {
     font-family: Arial, sans-serif;
+    color: #000;
+    background-color: #fff;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f9;
 }
 
 header {
-    background-color: #4a90e2;
-    color: #fff;
-    padding: 20px;
+    background-color: #ffffff; 
+    color: #000000; 
+    padding: 1.5rem 0;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
 }
 
 header h1 {
-    text-align: center;
-    font-size: 2em;
+    font-size: 2.5rem;
 }
 
-nav ul {
+header nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    list-style: none;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
-nav ul li {
-    margin: 0 15px;
+header nav ul li {
+    margin: 0 1.5rem;
 }
 
-nav ul li a {
-    color: #fff;
+header nav ul li a {
+    color: #000; 
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 1.1rem;
 }
 
-nav ul li a:hover {
-    color: #2817dc;
+header nav ul li a:hover {
+    color: #222222; 
 }
 
 .boas-vindas {
+    background-color: #f9f9f9;
+    padding: 2rem;
     text-align: center;
-    padding: 50px 20px;
-    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
 }
 
 .boas-vindas h2 {
-    font-size: 1.8em;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.boas-vindas p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
     color: #333;
-    margin-bottom: 20px;
 }
 
 .boas-vindas button {
-    background-color: #1974cf;
+    background-color: #000;
     color: #fff;
-    padding: 10px 20px;
-    font-size: 1em;
-    border: none;
+    padding: 0.8rem 2rem;
+    border: 2px solid #000;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .boas-vindas button:hover {
-    background-color: #357ab8;
+    background-color: #333;
+    color: #fff;
 }
 
-/* Cards de Serviços */
-.servicos {
+.produtos {
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.produtos h2 {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 40px 20px;
-    background-color: #1974cf;
+    gap: 1.5rem;
 }
 
 .card {
-    background-color: #ffffff;
-    padding: 20px;
-    transition: background-color 0.3s ease;
-    width: 250px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 8px;
+    width: 250px;
+    padding: 1rem;
     text-align: center;
-    font-size: 1.1em;
 }
 
-.card:hover {
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
-/* Rodapé */
+.card p {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.card button {
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.card button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Footer */
 footer {
-    background-color: #4a90e2;
+    background-color: #161616;
     color: #ffffff;
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 1.5rem 0;
+    border-top: 2px solid #ddd;
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 0.5rem 0;
+    color: #ffffff;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
-    nav ul {
+    header nav ul {
         flex-direction: column;
     }
 
-    .boas-vindas {
-        padding: 30px 10px;
+    .card-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .servicos {
-        padding: 20px 10px;
-    }
-
-    .card {
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    .boas-vindas h2 {
-        font-size: 1.5em;
+    .boas-vindas, .produtos, footer {
+        padding: 1rem;
     }
 }
